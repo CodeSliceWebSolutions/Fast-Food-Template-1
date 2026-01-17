@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Mswenko Grill & Kota</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header class="hero-advanced">
+  <div class="hero-overlay"></div>
+
+  <div class="hero-content">
+    <img src="images/logo.png" alt="Mswenko's Corner Logo" class="hero-logo">
+
+    <h1>Mswenko's Corner</h1>
+    <p class="tagline">Home of manyiki nyoso 🔥</p>
+
+    <div class="hero-actions">
+      <a href="#menu" class="hero-btn primary">🍔 Order Now</a>
+      <a href="#menu" class="hero-btn secondary">View Menu</a>
+    </div>
+  </div>
+</header>
+
+
+<main id="menu"></main>
+
+<!-- CART BUTTON -->
+<div class="cart-float" id="cartButton" onclick="toggleCart()">
+  🛒 View Cart & Order<br>
+  <small><span id="cartQty">0</span> items • <span id="cartTotal">R0</span></small>
+</div>
+
+<!-- CART MODAL -->
+<div id="cartModal" class="modal">
+  <div class="modal-box">
+
+    <h2>🛒 Your Order</h2>
+
+    <!-- CART ITEMS -->
+    <div id="cartItems" class="cart-items"></div>
+
+    <!-- TOTAL -->
+    <div class="total-row">
+      Total: <strong id="finalTotal">R0</strong>
+    </div>
+
+    <!-- DATE + TIME -->
+    <div class="datetime-row">
+      <input type="date" id="orderDate">
+      <select id="pickupTime"></select>
+    </div>
+
+    <!-- CUSTOMER -->
+    <input id="custName" placeholder="Your Name">
+    <input id="custPhone" placeholder="Phone Number">
+
+    <!-- ACTIONS -->
+    <button class="order-btn" onclick="sendOrder()">Send Order via WhatsApp</button>
+    <button class="close-btn" onclick="toggleCart()">Close</button>
+
+  </div>
+</div>
+
+<footer class="footer">
+  <p>📍 1444 Braamfisherville Phase 1, Cameroon Street</p>
+  <p>📞 060 252 7222 / 068 141 6150</p>
+</footer>
+
+<script src="app.js"></script>
+</body>
+</html>
