@@ -216,10 +216,16 @@ function sendOrder() {
   message += `Pickup Time: ${pickupTime.value}%0A%0A`;
 
   let total = 0;
+
   for (let item in cart) {
-    message += `• ${item} x${cart[item].qty}%0A`;
-    total += cart[item].price * cart[item].qty;
+    const qty = cart[item].qty;
+    const price = cart[item].price;
+    const lineTotal = price * qty;
+
+    message += `• ${item} – R${price} x${qty} = R${lineTotal}%0A`;
+    total += lineTotal;
   }
+
 
   message += `%0A*Total: R${total}*`;
 
